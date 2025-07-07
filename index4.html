@@ -262,6 +262,17 @@
             z-index: 10;
             max-width: 300px;
         }
+
+        /* New style for restaurant image in map overlay */
+        .restaurant-image-display {
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: none; /* Hidden by default */
+        }
         
         .map-overlay h3 {
             margin-bottom: 15px;
@@ -339,7 +350,6 @@
     </style>
 </head>
 <body>
-    <!-- 顶部导航 -->
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -362,7 +372,6 @@
         </div>
     </header>
     
-    <!-- 主横幅区域 -->
     <section class="hero">
         <div class="hero-content">
             <h2>探索香港地道美食</h2>
@@ -371,23 +380,12 @@
         </div>
     </section>
     
-    <!-- 餐厅列表 -->
     <section class="container" id="restaurants">
         <div class="section-title">
             <h2>精选餐厅</h2>
         </div>
         
-        <div class="filters">
-            <button class="filter-btn active">全部</button>
-            <button class="filter-btn">粤菜</button>
-            <button class="filter-btn">点心</button>
-            <button class="filter-btn">甜品</button>
-            <button class="filter-btn">快餐</button>
-            <button class="filter-btn">日本料理</button>
-        </div>
-        
         <div class="restaurants-grid">
-            <!-- 新记鸡粥 -->
             <div class="restaurant-card">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1625944525533-473f1f7f4e7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');"></div>
                 <div class="card-content">
@@ -402,7 +400,6 @@
                 </div>
             </div>
             
-            <!-- 吉野家 -->
             <div class="restaurant-card">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');"></div>
                 <div class="card-content">
@@ -417,7 +414,6 @@
                 </div>
             </div>
             
-            <!-- 笼太子点心专门店 -->
             <div class="restaurant-card">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1625944525533-473f1f7f4e7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');"></div>
                 <div class="card-content">
@@ -432,7 +428,6 @@
                 </div>
             </div>
             
-            <!-- 大快活 -->
             <div class="restaurant-card">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1554679665-f5537f187268?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');"></div>
                 <div class="card-content">
@@ -447,39 +442,36 @@
                 </div>
             </div>
             
-            <!-- 亚婆豆腐花 -->
             <div class="restaurant-card">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');"></div>
                 <div class="card-content">
-                    <h3>亚婆豆腐花</h3>
-                    <p>创立于1960年代，坚持使用优质黄豆，每日新鲜制作，保留最传统的风味和口感。</p>
+                    <h3>元氣壽司</h3>
+                    <p>源自日本的回转寿司连锁品牌，提供新鲜美味的寿司和日式料理，以合理的价格享受正宗日本风味。</p>
                     <div class="tags">
-                        <span class="tag">甜品</span>
-                        <span class="tag">传统糖水</span>
-                        <span class="tag">豆腐花</span>
+                        <span class="tag">日本料理</span>
+                        <span class="tag">寿司</span>
+                        <span class="tag">回转寿司</span>
                     </div>
-                    <a href="ah-po-tofu-fa.html" class="btn">查看详情</a>
+                    <a href="genki-sushi.html" class="btn">查看详情</a>
                 </div>
             </div>
             
-            <!-- 松记糖水 -->
             <div class="restaurant-card">
                 <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1560008581-09826d1de69e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1144&q=80');"></div>
                 <div class="card-content">
-                    <h3>松记糖水</h3>
-                    <p>香港最具人气的甜品连锁店之一，以创意甜品闻名，坚持每日新鲜制作，带来独特的甜品体验。</p>
+                    <h3>美心皇宮</h3>
+                    <p>香港著名连锁酒楼集团，提供正宗粤式点心和小菜，环境优雅，是饮茶和聚餐的理想选择。</p>
                     <div class="tags">
-                        <span class="tag">甜品</span>
-                        <span class="tag">糖水</span>
-                        <span class="tag">创新</span>
+                        <span class="tag">粤菜</span>
+                        <span class="tag">点心</span>
+                        <span class="tag">酒楼</span>
                     </div>
-                    <a href="sung-kee-dessert.html" class="btn">查看详情</a>
+                    <a href="maxims-palace.html" class="btn">查看详情</a>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- 美食地图 -->
     <section class="container" id="map">
         <div class="section-title">
             <h2>美食地图</h2>
@@ -488,24 +480,23 @@
         <div class="map-container">
             <div class="map-overlay">
                 <h3>餐厅位置</h3>
-                <div class="restaurant-list">
-                    <div>新记鸡粥 - 深水埗北河街118号</div>
-                    <div>吉野家 - 数码港道100号数码港商场</div>
-                    <div>笼太子点心专门店 - 数码港道100号数码港商场3楼</div>
-                    <div>大快活 - 数码港道100号数码港商场地下</div>
-                    <div>亚婆豆腐花 - 深水埗北河街118号地下</div>
-                    <div>松记糖水 - 佐敦白加士街23号地下</div>
+                <div id="restaurantImageDisplay" class="restaurant-image-display"></div> <div class="restaurant-list">
+                    <div data-image="https://images.unsplash.com/photo-1625944525533-473f1f7f4e7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">新记鸡粥 - 深水埗北河街118号</div>
+                    <div data-image="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">吉野家 - 数码港道100号数码港商场</div>
+                    <div data-image="https://images.unsplash.com/photo-1625944525533-473f1f7f4e7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">笼太子点心专门店 - 数码港道100号数码港商场3楼</div>
+                    <div data-image="https://images.unsplash.com/photo-1554679665-f5537f187268?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80">大快活 - 数码港道100号数码港商场地下</div>
+                    <div data-image="https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">元氣壽司 - 铜锣湾时代广场地库</div>
+                    <div data-image="https://images.unsplash.com/photo-1560008581-09826d1de69e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1144&q=80">美心皇宮 - 尖沙咀海港城港威商场</div>
                 </div>
             </div>
             <iframe id="main-map" src="https://www.google.com/maps/d/embed?mid=1lZ2UJYvW6d8d4sX8j4X0z2q2Z2Z2Z2Z2&ehbc=2E312F" frameborder="0"></iframe>
         </div>
     </section>
     
-    <!-- 页脚 -->
     <footer>
         <div class="container">
             <div class="copyright">
-                <p>&copy; 2023 香港美食地图 版权所有</p>
+                <p>© 2023 香港美食地图 版权所有</p>
             </div>
         </div>
     </footer>
@@ -526,9 +517,24 @@
             });
         });
         
+        // 获取图片显示区域
+        const restaurantImageDisplay = document.getElementById('restaurantImageDisplay');
+
         // 餐厅列表点击事件
         document.querySelectorAll('.restaurant-list div').forEach(item => {
             item.addEventListener('click', function() {
+                // 获取data-image属性值
+                const imageUrl = this.getAttribute('data-image');
+                
+                if (imageUrl) {
+                    // 设置背景图片并显示
+                    restaurantImageDisplay.style.backgroundImage = `url('${imageUrl}')`;
+                    restaurantImageDisplay.style.display = 'block';
+                } else {
+                    // 如果没有图片，则隐藏
+                    restaurantImageDisplay.style.display = 'none';
+                }
+
                 // 这里可以添加地图定位功能
                 alert('定位到: ' + this.textContent);
             });
